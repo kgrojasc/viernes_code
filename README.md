@@ -21,7 +21,7 @@ Este es un taller introductorio al análisis de datos en R y Python. Está dirig
 
 ## Interacción asincrónica
 
-Usaremos Discord para interactuar y colaborar `r fa('hand-back-point-right')` [AQUÍ](https://discord.gg/YhJscvYB)
+Usaremos Discord para interactuar y colaborar [AQUÍ](https://discord.gg/YhJscvYB)
 
 
 ## Lecturas
