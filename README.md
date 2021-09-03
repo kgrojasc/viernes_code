@@ -19,23 +19,12 @@ Este es un taller introductorio al análisis de datos en R y Python. Está dirig
 
 - Introducción a Python. 29 octubre, 5 noviembre. Carlos Yanes
 
+## Interacción asincrónica
+
+Usaremos Discord para interactuar y colaborar [`r fa('play')`](https://discord.gg/YhJscvYB)
+
 
 ## Lecturas
 
-1. Presentación del curso [Sesión 1](https://raw.githack.com/andvarga-eco/intro_dataecon/main/00-Intro.html)
-
-2. Introducción [Sesión 1](https://raw.githack.com/andvarga-eco/intro_dataecon/main/01-Intro.html)
-
-3. Análisis exploratorio de datos [Sesión 2](https://raw.githack.com/andvarga-eco/intro_dataecon/main/02-EDA.html)
-
-4. Tarea de clasificación usando vecinos cercanos [Sesión 3-4](https://raw.githack.com/andvarga-eco/intro_dataecon/main/03-Vecinos.html)
-
-5. Tarea de predicción usando regresión [Sesión 5](https://raw.githack.com/andvarga-eco/intro_dataecon/main/04-reg.html)
-
-6. Naive Bayes [Sesión 6](https://raw.githack.com/andvarga-eco/intro_dataecon/main/05-bayes.html)
-
-7. Visualización [Sesión 7](https://raw.githack.com/andvarga-eco/intro_dataecon/main/06-Visualizaci%C3%B3n.html)
-
-8. R Shiny [Sesión 8](https://raw.githack.com/andvarga-eco/intro_dataecon/main/07-rshiny.Rmd) [Ejercicio Rshiny](https://raw.githack.com/andvarga-eco/intro_dataecon/main/07-Ejercicios%20Shiny.Rmd)
-
-
+- [00-Introducción](https://raw.githack.com/andvarga-eco/viernes_code/main/00-Intro.html)
+- [01-Introducción](https://raw.githack.com/andvarga-eco/viernes_code/main/01-Intro.html)
