@@ -2,7 +2,15 @@
 title: "Introducción "
 author: "Andrés Vargas, Carlos Yanes, David Pinedo"
 date: "03/09/2021"
-output: html_document
+output: 
+  html_document:
+    theme: flatly
+    toc: TRUE
+    toc_float: TRUE
+    toc_depth: 2
+    number_sections: TRUE
+    code_folding: hide
+    code_download: TRUE
   
 ---
 
@@ -78,7 +86,7 @@ Para una buena discusión sobre el ruido y la señal se recomienda la siguiente 
 
 <br/>
 
-### Tipos de objetos
+## Tipos de objetos
 
 <br/>
 
@@ -167,14 +175,40 @@ Esto es solo el principio, podriamos seguir con diferentes categorizaciones. En 
 
 En el mundo del *machine learning* también se habla de datos estructurados y no estructurados. Nosotros trabajaremos con los primeros. 
 
+<br/>
 
-### Comunicar los hallazgos
+**Ejercicio**
+
+Quiere analizar el comportamiento de la temperatura mensual en Barranquilla. Consigue la siguiente tabla de datos
+
+```{r,echo=FALSE,out.width='50%', fig.align='center', fig.cap='...'}
+knitr::include_graphics('images/temp.png')
+
+```
+
+<br/>
+
+1. Cree un vector para cada columna
+2. Una los vectores y conviértalos en un objeto data frame
+3. Genere una nueva columna donde muestre cuanto mayor es la temperatura máxima en relación a la mínima
+4. Grafique esta relación para cada mes ¿Hay algún patrón?
+5. Calcule la temperatura media promedio para el año completo
+
+<br/>
+
+## Comunicar los hallazgos
 
 Los datos los analizamos para responder a una pregunta. Comunicar lo que hallamos es tan importante como el rigor para llegar al hallazgo. Si no comunica bien no persuade, no incita a la acción. Haremos énfasis en la comunicación visual. Como dice el dicho, "la comida entra por los ojos". Usaremos ggplot2 para casi todas nuestras tareas de visualización. Es realmente poderoso para producir visualizaciones llamativas. 
 
-### Demostración ^[Ejemplo basado en https://raw.githack.com/uo-ec607/lectures/master/01-intro/01-Intro.html#1 Gracias a Grant McDermot por compartir el material ]
+<br/>
+
+## Demostración ^[Ejemplo basado en https://raw.githack.com/uo-ec607/lectures/master/01-intro/01-Intro.html#1 Gracias a Grant McDermot por compartir el material ]
+
+<br/>
 
 #### Ingreso per cápita y expectativa de vida
+
+<br/>
 
 Queremos saber como es la relación entre el ingreso promedio por persona en un país y la expectativa de vida al nacer. Nuestro análisis es exploratorio. 
 
@@ -187,12 +221,16 @@ gapminder
 
 ```
 
+<br/>
+
 Tenemos datos de expectativa de vida al nacer, población e ingreso per cápita, medido en [dólares internacionales de 2011](https://datahelpdesk.worldbank.org/knowledgebase/articles/114944-what-is-an-international-dollar),  a nivel de país cada 5 años. Los datos son un objeto tipo [tibble](https://tibble.tidyverse.org/)
 
 
 ```{r}
 class(gapminder)
 ```
+
+<br/>
 
 Empecemos explorando la relación entre la expectativa de vida al nacer y el PIB Per capita
 
@@ -201,11 +239,15 @@ plot_1<-ggplot(gapminder,aes(x=gdpPercap,y=lifeExp))+geom_point()
 plot_1
 ```
 
-¿Qué puede decir? Escriba acá su interpretación de esta gráfica
+<br/>
+
+¿Qué puede decir? Escriba su interpretación de esta gráfica
 
 
 
 Veamos si hay alguna diferencia por continentes
+
+<br/>
 
 ```{r}
 plot_2<-ggplot(gapminder,aes(x=gdpPercap,y=lifeExp,color=continent))+geom_point()+
@@ -213,12 +255,18 @@ plot_2<-ggplot(gapminder,aes(x=gdpPercap,y=lifeExp,color=continent))+geom_point(
 plot_2
 ```
 
+<br/>
+
 La relación parece ser no lineal. Veamos
+
+<br/>
 
 ```{r}
 plot_3<-plot_1+geom_smooth(method="loess")+xlab("PIB Per cápita (Int. dollars, 2011)")+ylab("Expectativa de vida al nacer (años)")
 plot_3
 ```
+
+<br/>
 
 Loess es por "Locally weighted smoothing". Este es un algoritmo no paramétrico cuyo proppósito es recuperar la señal en una muestra de datos ruidosa
 
@@ -231,10 +279,13 @@ En el siguiente chunk realice la suavización loess para plot_2
 
 ```
 
+<br/>
 
 ¿Por qué la diferencia en la suavización?
 
 Comparelo con el resultado que arroja el siguiente código ¿Dónde está la diferencia?
+
+<br/>
 
 ```{r}
 plot_5<-ggplot(gapminder,aes(x=gdpPercap,y=lifeExp))+geom_point(aes(color=continent))+
@@ -242,6 +293,8 @@ plot_5<-ggplot(gapminder,aes(x=gdpPercap,y=lifeExp))+geom_point(aes(color=contin
   geom_smooth(method="loess")
 plot_5
 ```
+
+<br/>
 
 Calculemos el ingreso per cápita promedio por año
 
@@ -252,12 +305,13 @@ meanyft<-flextable(meany)
 meanyft
 ```
 
+<br/>
+
 **Ejercicio**
 
 1. Calcule el ingreso per cápita promedio por año por continente
 
 2. Use ggplot con geom_line() para crear la siguiente gráfica
-
 
 
 ```{r,echo=FALSE,out.width='80%', fig.align='center', fig.cap='...'}
