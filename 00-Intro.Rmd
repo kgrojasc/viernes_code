@@ -68,6 +68,6 @@ Asegúrese de poder contar con lo siguiente
 
 Cada sesión tiene dos partes. La primera es demostrativa y funciona similar a una clase tradicional. La segunda parte es de manos a la obra. Usaremos [R Markdown](https://rmarkdown.rstudio.com/), pues nos permite presentar texto y código de programación en el mismo archivo. Para una guía detallada para su uso [ver](https://bookdown.org/yihui/rmarkdown/)
 
-Los códigos, archivos Rmd, y los datos estarán alojados en https://github.com/andvarga-eco/intro_dataecon
+Los códigos, archivos Rmd, y los datos estarán alojados [AQUÍ](https://github.com/andvarga-eco/viernes_code) 
 
 

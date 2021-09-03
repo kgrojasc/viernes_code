@@ -49,11 +49,16 @@ end<-as.Date("2021-09-02")
 
 getSymbols("BZ=F",src="yahoo", from=start, to=end)
 
+
+```
+
+```{r}
 library(dygraphs)
 brentd<-dygraph(`BZ=F`[,"BZ=F.Close"],main="Brent-precio de cierre (USD)-Diario")
 brentd
-
 ```
+
+
 
 ```{r}
 
@@ -70,6 +75,68 @@ dygraph(brenty[,"BZ=F.Close"],main="Brent-precio de cierre (USD)-Anual")
 Si usted observa datos del precio del petróleo, Brent, en frecuencia anual el ratio señal a ruido digamos que es uno a uno. La mitad de lo que observa es variabilidad aleatoria. Si los datos los observa a frecuencia mensual, entonces usted podría tener 70% de ruido y 30% de señal, mientras que si los mira a frecuencia diaria el 95% es ruido. A frecuencia diaria usted tiene más datos, pero ciertamente no tiene más capacidad para entender el comportamiento de largo plazo del precio del petróleo. Más no siempre es mejor. 
 
 Para una buena discusión sobre el ruido y la señal se recomienda la siguiente lectura [The noise bottleneck: when more information is harmful](https://fs.blog/2012/05/noise-and-signal-nassim-taleb/)
+
+<br/>
+
+### Tipos de objetos
+
+<br/>
+
+R Funciona sobre objetos. Los objetos tienen atributos. Unos son más complejos que otros. Lo que podemos hacer con cada objeto depende de sus atributos. En una silla se sienta, en una butaca también, pero quizás la silla es mejor para trabajar en el escritorio.
+
+<br/>
+
+#### Vectores atómicos
+
+Es un vector de datos. Veamos
+
+```{r}
+dado<-c(1,2,3,4,5,6)
+diez<-c(10)
+asistentes<-c("pedro","juan","diana","helena")
+nota<-c(3.1,4.2,4.5,3.8)
+
+```
+
+<br/>
+
+Usted puede hacer operaciones sobre los datos contenidos en el vector, y crear nuevos objetos basado en las operaciones realizadas
+
+```{r}
+mean(nota)
+promedio<-mean(nota)
+```
+
+<br/>
+
+Si los vectores tienen la misma longitud, entonces puede unirlos
+
+```{r}
+curso<-cbind(asistentes,nota)
+print(curso)
+```
+
+<br/>
+
+#### Data Frame
+
+Es un arreglo de datos de dos dimensiones en forma matricial. Si ha trabajado con bases de datos, esto le será familiar
+
+```{r}
+df<-data.frame(curso)
+class(df$asistentes)
+class(df$nota)
+```
+
+<br/>
+
+Cada columna del data frame es un objeto. Objetos dentro de objetos. En el lenguaje de "base de datos" cada columna sería nuestra variable y cada fila las observaciones. Podemos crear nuevos objetos dentro del data frame
+
+```{r}
+df$nota<-as.numeric(df$nota) # convertimos de character a numeric
+df$lnota<-log(df$nota)
+```
+
 
 ### Tipos de datos
 
