@@ -1,0 +1,73 @@
+---
+title: "Presentación"
+author: "Andrés Vargas, Carlos Yanes, David Pinedo"
+date: "03/09/2021"
+output: html_document
+   
+---
+
+## Propósito del curso
+
+Aborda tópicos usualmente ignorados en los cursos de estadística y econometría. En esos cursos los datos suelen venir listos para estimar. El estudiante termina creyendo que el trabajo empírico se lleva a cabo en unas pocas líneas de programación. NO. Nada más falso que eso. En mi experiencia personal, la estimación viene después de mucho trabajo consiguiendo, ordenando, limpiando, explorando los datos. Esa fase previa consume alrededor del 80% del tiempo de trabajo. Además, solemos desechar las humildes estadísticas descriptivas y la visualización de los datos para concentrarnos en el trabajo serio, las estimaciones de modelos complicados. En mi experiencia, el poder interpretativo del investigador solo puede ser desarrollado después de meterse de lleno en los datos, visualizarlos, hacer cruces de variables, calcular simples estadísticas. Aterrizar de una en los modelos complicados sin todo el trabajo previo es como llegar a un cargo directivo siendo un inocente recien graduado. Todo lo bueno requiere tiempo. 
+
+Y digo investigador porque aún si usted no se dedica a la academía, se dará cuenta que el poder de ser fluido con los datos deriva no de sus habilidades de programación sino de su ingenio para hacer cosas útiles con ellos. De transformarlos en un insumo para decidir mejor. 
+
+En pocas palabras, el diseño de este curso está inspirado en lo que ha sido mi experiencia personal y lo que hubiese deseado que me enseñaran en la universidad. 
+
+
+## Contenido del curso
+
+El curso se organiza alrededor del flujo típico de un proyecto
+
+```{r, echo=FALSE, warning=FALSE,message=FALSE, fig.cap="Flujo simple de un proyecto"}
+library(DiagrammeR)
+grViz(diagram = "digraph flowchart {
+
+node [fontname = helvetica, shape = oval, style=filled,fillcolor = lightblue, color=lightblue]
+Pregunta
+Datos
+Algoritmo
+Comunicación
+
+Pregunta->Datos->Algoritmo->Comunicación
+}")
+```
+
+Todo empieza con un objetivo, una pregunta, una necesidad, un problema. Usted se levanta por la mañana, tiene hambre y necesita desayunar. Busca en la nevera y la alacena, encuentra huevos, tomate, jamón, queso, pan, yuca, arepas ¿Qué puede hacer con lo que ha encontrado? Quizás huevos fritos con arepa y queso.  Mejor huevos con tomate y jamón, y un sánduche de queso. De pronto muy complicado, tiene poco tiempo y requiere combustible, así que un sánduche de jamón y queso basta. 
+
+El análisis de datos es lo mismo. Partimos de una necesidad, buscamos los datos, los procesamos y analizamos usando los métodos adecuados para lo que queremos y lo que tenemos. A veces tenemos datos que no necesitamos, y a veces quisieramos tener datos con los que no contamos. Para mi, un buen cocinero es el que hace lo mejor que puede con lo que tiene disponible ¿Para que sirve crear una receta que no se podrá preparar por falta de ingredientes?
+
+
+### Tópicos
+
+- Introducción. 3 de septiembre. Andrés Vargas
+
+- Organización de datos (data wrangling). 10 y 17 de septiembre. David Pinedo
+
+- Análisis exploratorio de datos. 24 de septiembre. Andrés Vargas
+
+- Predicción. 1 octubre. Andrés Vargas
+
+- Clasificación. 8 y 22 de octubre. David Pinedo
+
+- Introducción a Python. 29 octubre, 5 noviembre. Carlos Yanes
+
+
+## ¿Qué necesita para este curso?
+
+Asegúrese de poder contar con lo siguiente
+
+1. Acceso a un computador. Los equipos del Laboratorio de Economía están disponibles durante las horas de clase
+
+2. Instalar R y RStudio
+
+3. Buena disposición para participar y hablar en clase. No se preocupe, acá estamos todos para aprender
+
+
+## Metodología
+
+Cada sesión tiene dos partes. La primera es demostrativa y funciona similar a una clase tradicional. La segunda parte es de manos a la obra. Usaremos [R Markdown](https://rmarkdown.rstudio.com/), pues nos permite presentar texto y código de programación en el mismo archivo. Para una guía detallada para su uso [ver](https://bookdown.org/yihui/rmarkdown/)
+
+Los códigos, archivos Rmd, y los datos estarán alojados en https://github.com/andvarga-eco/intro_dataecon
+
+
